@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 bg-secondary-light/30 text-primary-dark px-4 py-2 rounded-full font-medium text-sm w-max">
             Welcome to <img src={logo} alt="तथास्तु" className="h-5 w-auto object-contain inline-block" />
           </div>
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-primary-dark">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-dark">
             Holistic Healing <br/>
             <span className="text-accent-dark">Through Ayurveda</span>
           </h1>
