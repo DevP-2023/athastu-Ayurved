@@ -16,13 +16,14 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20">
       {/* Background gradient/pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary-light/20 to-background z-0" />
-      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none z-0" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/floral-motif.png")' }}></div>
-      
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop")' }}></div>
+      <div className="absolute inset-0 bg-background/85 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary-light/30 to-transparent z-0" />
+
       <div className="container mx-auto px-4 md:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-12 py-12">
-        
+
         {/* Text Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -32,7 +33,7 @@ const Hero = () => {
             Welcome to <img src={logo} alt="तथास्तु" className="h-5 w-auto object-contain inline-block" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-dark">
-            Holistic Healing <br/>
+            Holistic Healing <br />
             <span className="text-accent-dark">Through Ayurveda</span>
           </h1>
           <h2 className="text-xl text-text-light font-medium leading-relaxed">
@@ -41,9 +42,9 @@ const Hero = () => {
           <p className="text-text/80 leading-relaxed max-w-lg">
             We provide personalized Ayurvedic care focused on treating the root cause of disease while promoting long-term wellness through traditional therapies and modern healthcare understanding.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 mt-4">
-            <Link 
+            <Link
               to="contact"
               spy={true}
               smooth={true}
@@ -57,7 +58,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Image Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -66,34 +67,34 @@ const Hero = () => {
           {/* Main Image Grid container to hold both doctor and clinic elegantly */}
           <div className="relative w-full h-full max-w-lg mx-auto">
             {/* Clinic Image (Right/Back) */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="absolute right-0 top-0 w-3/4 h-3/4 rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-10"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
-                alt="Ayurvedic Clinic" 
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+                alt="Ayurvedic Clinic"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
             </motion.div>
-            
+
             {/* Doctor Image (Left/Front) */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className="absolute left-0 bottom-0 w-2/3 h-2/3 rounded-full overflow-hidden shadow-2xl border-8 border-background z-20"
             >
-              <img 
-                src={doctorPhoto} 
-                alt="Doctor Profile" 
+              <img
+                src={doctorPhoto}
+                alt="Doctor Profile"
                 className="w-full h-full object-cover object-top"
               />
             </motion.div>
-            
+
             {/* Decorative leaf element */}
             <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-accent-light/30 rounded-full blur-2xl z-0"></div>
           </div>
@@ -105,12 +106,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-8 relative z-20 -mt-8 md:-mt-16 pb-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              key={index} 
+              key={index}
               className="glass rounded-2xl p-6 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-secondary-light/20 flex items-center justify-center mb-4">
